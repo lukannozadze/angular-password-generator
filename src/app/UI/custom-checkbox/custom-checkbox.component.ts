@@ -15,10 +15,12 @@ isClicked = false;
 onCheckboxClick(){
 this.isClicked = !this.isClicked;
 if(this.isClicked){
+  
   this.passService.addReq(this.activeEl);
-}else{
+}
+else{
   this.passService.removeReq(this.activeEl);
 }
-console.log(this.passService.print());
+
 }
 }

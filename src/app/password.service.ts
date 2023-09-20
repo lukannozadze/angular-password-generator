@@ -3,26 +3,53 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class PasswordService {
-passRequirements:string[] = [];
-lowCase = "abcdefghijklmnopqrstuvxyz";
-upCase = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
-Numbers = "0123456789";
-SpecialChar = "£$&()*+[]@#^-_!?";
+export class PasswordService{
+requirementArr:string[] = ['Include Uppercase Letters','Include Lowercase Letters','Include Numbers','Include Symbols'];
+mixedStringArr:string[]=['ABCDEFGHIJKLMNOPQRSTUVXYZ','abcdefghijklmnopqrstuvxyz','0123456789','£$&()*+[]@#^-_!?'];
+chosenReqArr:string[] = [];
+mixedString:string = '';
+ pass = '';
   constructor() { }
 
 addReq(req:string){
-  let newArr = this.passRequirements.slice();
-  newArr.push(req);
-  this.passRequirements = [...newArr];
+   const newArr = this.chosenReqArr.slice();
+   let index =this.requirementArr.indexOf(req);
+   newArr.push(this.mixedStringArr[index]);
+   this.chosenReqArr = [...newArr];
 }
-removeReq(req:string){
-  let newArr = this.passRequirements.slice();
-  newArr =  this.passRequirements.filter((item)=>item!==req);
-  this.passRequirements = [...newArr];
+ removeReq(req:string){
+  let newArr = this.chosenReqArr.slice();
+  let index =this.requirementArr.indexOf(req);
+  newArr = this.chosenReqArr.filter((item)=>item!==this.mixedStringArr[index]);
+  this.chosenReqArr = [...newArr];
+ }
+generatePassword(passLength:number){
+ 
+  let choosenReqQuantity = this.chosenReqArr.length;
+  for(let i =0;i<passLength;i++){
+    if(i%choosenReqQuantity===0){
+      this.addRandomSymbol(0);
+    }else if(i%choosenReqQuantity===1){
+      this.addRandomSymbol(1);
+    }else if(i%choosenReqQuantity===2){
+      this.addRandomSymbol(2);
+    }else if(i%choosenReqQuantity===3){
+      this.addRandomSymbol(3);
+    }
+    // let randomArrIndex = Math.floor((Math.random()) * this.chosenReqArr.length);
+    // console.log(randomArrIndex);
+   
+  }
+  
+  console.log(this.pass);
+  this.pass = '';
+  
 }
-
-print(){
-  return this.passRequirements;
+addRandomSymbol(num:number){
+  let randomStrIndex = Math.floor((Math.random() * this.chosenReqArr[num].length));
+  this.pass += this.chosenReqArr[num][randomStrIndex]
 }
+// print(){
+//   return this.passRequirements;
+// }
 }
