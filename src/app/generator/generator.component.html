@@ -1,1 +1,16 @@
-<p>generator works!</p>
+<div class="app-container">
+    <form class="form-container" #f="ngForm">
+        <div class="char-length-dashboard-container">
+            <span class="char-length">Character Length</span>
+            <span class="range-indicator">{{rangeIndicator}}</span>
+        </div>
+        <input class="range-input" (change)="onRangeChange()" type="range" min="0" max="20" name="point" #range="ngModel" ngModel>
+      <div class="password-req-cont">
+          <div class="checkbox-requirement-container" *ngFor="let item of requirementArr">
+              <app-custom-checkbox [active]="item"></app-custom-checkbox>
+              <span>{{item}}</span>
+          </div>
+      </div>
+      
+    </form>
+</div>

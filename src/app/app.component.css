@@ -1,6 +1,8 @@
-.app-container{
+.app-outer-container{
     max-width: 100vw;
     min-height: 100vh;
     max-height: fit-content;
-    background-color: #24232C;
+    background-color: #18171F;
+    display: flex;
+    justify-content: center;
 }

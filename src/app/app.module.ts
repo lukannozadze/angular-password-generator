@@ -3,15 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { GeneratorComponent } from './generator/generator.component';
+import { FormsModule } from '@angular/forms';
+import { CustomCheckboxComponent } from './UI/custom-checkbox/custom-checkbox.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GeneratorComponent
+    GeneratorComponent,
+    CustomCheckboxComponent
 
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

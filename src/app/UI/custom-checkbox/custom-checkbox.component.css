@@ -1,0 +1,8 @@
+.checkbox-container{
+    width: 20px;
+    height: 20px;
+    border: 2px solid #E6E5EA ;
+}
+.active{
+    background-color: green;
+}

@@ -1,0 +1,50 @@
+.app-container{
+    width: 540px;
+    background-color:#24232C ;
+}
+.form-container{
+   padding-left: 32px;
+   padding-right: 32px;
+}
+.char-length-dashboard-container{
+    display: flex;
+    justify-content: space-between;
+}
+.range-input{
+    width: 100%;
+    height: 8px;
+    
+    background-color: #18171F;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.range-indicator{
+    color: #A4FFAF;
+}
+.char-length{
+    color: #E6E5EA;
+}
+.range-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 28px; 
+    height: 28px;
+    background-color: #E6E5EA; 
+    border-radius: 50%; 
+  }
+  
+  .range-input::-webkit-slider-runnable-track{
+    accent-color: #A4FFAF;
+  }
+  .password-req-cont{
+    display: flex;
+    flex-direction: column;
+   gap: 20px;
+  }
+  .checkbox-requirement-container{
+    display: flex;
+    gap: 24px;
+  }
+  .checkbox-requirement-container span{
+  color: #E6E5EA;
+  }
