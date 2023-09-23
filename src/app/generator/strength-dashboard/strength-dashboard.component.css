@@ -1,0 +1,27 @@
+.strength-container{
+    width: 100%;
+    background-color: #18171F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.strength-cubes-container{
+    display: flex;
+    gap: 8px;
+}
+.strength-level-dashboard{
+    display: flex;
+    align-items: center;
+    gap: 15.5px;
+}
+.cube{
+    width: 10px;
+    height: 28px;
+}
+.strong{
+    background-color: green;
+}
+
+.weak.cube1, .weak.cube2{
+    background-color: #FB7C58;
+}

@@ -1,10 +1,8 @@
 .app-container{
     width: 540px;
     background-color:#24232C ;
-}
-.form-container{
-   padding-left: 32px;
-   padding-right: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
 }
 .char-length-dashboard-container{
     display: flex;

@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 import { PasswordService } from '../password.service';
 @Component({
   selector: 'app-generator',
@@ -7,13 +7,20 @@ import { PasswordService } from '../password.service';
 })
 export class GeneratorComponent  {
  constructor(private passService:PasswordService){}
-@ViewChild('f') formEl: any;
+@ViewChild('range') formEl: any;
+ReqNumber:number = 0;
 rangeIndicator:number = 10;
 requirementArr:string[] = ['Include Uppercase Letters','Include Lowercase Letters','Include Numbers','Include Symbols'];
+strengthNumber:number = 0;
  onRangeChange(){
-  this.rangeIndicator = +this.formEl.value.point
+  this.rangeIndicator = +this.formEl.value
+  console.log(this.formEl)
  }
  onGenerateClick(){
-this.passService.generatePassword(10);
+this.passService.generatePassword(this.rangeIndicator);
+ }
+
+ onStrengthEvent(eventData:number){
+ this.strengthNumber = eventData;
  }
 }

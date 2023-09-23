@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,7 @@ requirementArr:string[] = ['Include Uppercase Letters','Include Lowercase Letter
 mixedStringArr:string[]=['ABCDEFGHIJKLMNOPQRSTUVXYZ','abcdefghijklmnopqrstuvxyz','0123456789','£$&()*+[]@#^-_!?'];
 chosenReqArr:string[] = [];
 mixedString:string = '';
+
  pass = '';
   constructor() { }
 
@@ -16,15 +18,18 @@ addReq(req:string){
    let index =this.requirementArr.indexOf(req);
    newArr.push(this.mixedStringArr[index]);
    this.chosenReqArr = [...newArr];
+   
 }
  removeReq(req:string){
   let newArr = this.chosenReqArr.slice();
   let index =this.requirementArr.indexOf(req);
   newArr = this.chosenReqArr.filter((item)=>item!==this.mixedStringArr[index]);
   this.chosenReqArr = [...newArr];
+  
  }
 generatePassword(passLength:number){
  
+  
   let choosenReqQuantity = this.chosenReqArr.length;
   for(let i =0;i<passLength;i++){
     if(i%choosenReqQuantity===0){
@@ -36,11 +41,8 @@ generatePassword(passLength:number){
     }else if(i%choosenReqQuantity===3){
       this.addRandomSymbol(3);
     }
-    // let randomArrIndex = Math.floor((Math.random()) * this.chosenReqArr.length);
-    // console.log(randomArrIndex);
-   
+
   }
-  
   console.log(this.pass);
   this.pass = '';
   
@@ -49,7 +51,5 @@ addRandomSymbol(num:number){
   let randomStrIndex = Math.floor((Math.random() * this.chosenReqArr[num].length));
   this.pass += this.chosenReqArr[num][randomStrIndex]
 }
-// print(){
-//   return this.passRequirements;
-// }
+
 }

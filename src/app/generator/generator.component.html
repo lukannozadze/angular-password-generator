@@ -5,13 +5,13 @@
             <span class="range-indicator">{{rangeIndicator}}</span>
         </div>
         <input class="range-input" (change)="onRangeChange()" type="range" min="0" max="20" name="point" #range="ngModel" ngModel>
-      <div class="password-req-cont">
+      <div class="password-req-cont"   >
           <div class="checkbox-requirement-container" *ngFor="let item of requirementArr">
-              <app-custom-checkbox [active]="item"></app-custom-checkbox>
+              <app-custom-checkbox (strengthEvent)="onStrengthEvent($event)" [active]="item"></app-custom-checkbox>
               <span>{{item}}</span>
           </div>
       </div>
-      
     </form>
+    <app-strength-dashboard [strengthNumber]="strengthNumber" ></app-strength-dashboard>
     <button (click)="onGenerateClick()">Generate</button>
 </div>
