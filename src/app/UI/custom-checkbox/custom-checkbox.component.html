@@ -1,3 +1,5 @@
 <div [ngClass]="isClicked?'active':''" (click)="onCheckboxClick()" class="checkbox-container">
-
+    <div *ngIf="isClicked">
+        <app-checkbox-icon></app-checkbox-icon>
+    </div>
 </div>

@@ -7,4 +7,14 @@ import { Component, Input } from '@angular/core';
 })
 export class PasswordDashboardComponent {
 @Input('password') password:string = '';
+isCopyClicked:boolean = false;
+
+onCopyClick(){
+  this.isCopyClicked = true;
+
+  setTimeout(()=>{
+this.isCopyClicked = false;
+  },1000)
+  
+}
 }

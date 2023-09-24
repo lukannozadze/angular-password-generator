@@ -2,7 +2,11 @@
     width: 20px;
     height: 20px;
     border: 2px solid #E6E5EA ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: #A4FFAF;
 }
 .active{
-    background-color: green;
+    background-color: #A4FFAF;
 }

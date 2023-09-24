@@ -21,8 +21,10 @@ defineStrength(){
     this.status = 'weak';
   }else if(this.passService.chosenReqArr.length===3){
     this.status = 'medium';
-  }else{
+  }else if(this.passService.chosenReqArr.length===4){
     this.status = 'strong';
+  }else{
+    this.status = '';
   }
 }
 

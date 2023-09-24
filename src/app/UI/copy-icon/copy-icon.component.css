@@ -1,0 +1,7 @@
+.copy-icon:hover path{
+fill: white;
+transition: 0.3s;
+}
+.copy-icon:hover{
+    cursor: pointer;
+}

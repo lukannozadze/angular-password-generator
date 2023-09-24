@@ -35,6 +35,7 @@
 .cube{
     width: 10px;
     height: 28px;
+    border: 2px solid #E6E5EA;
 }
 .too-weak .cube1{
     background-color: #F64A4A;

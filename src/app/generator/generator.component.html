@@ -2,7 +2,7 @@
     <div class="app-title-container">    
     <span>Password Generator</span>
     </div>
-    <app-password-dashboard [password]="password"></app-password-dashboard>
+    <app-password-dashboard [password]="password" ></app-password-dashboard>
     <div class="app-container">
         <form class="form-container" #f="ngForm">
             <div class="char-length-dashboard-container">
@@ -19,7 +19,9 @@
         </form>
         <app-strength-dashboard [strengthNumber]="strengthNumber" [status]="status" ></app-strength-dashboard>
         <div class="generate-btn-container">
-            <button [disabled]="strengthNumber===0" (click)="onGenerateClick()">Generate</button>
+            <button [disabled]="strengthNumber===0" (click)="onGenerateClick()">Generate 
+                    <app-right-arrow-icon class="right-arrow"></app-right-arrow-icon> 
+            </button>
         </div>
     </div>
 </div>
