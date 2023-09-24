@@ -1,17 +1,25 @@
-<div class="app-container">
-    <form class="form-container" #f="ngForm">
-        <div class="char-length-dashboard-container">
-            <span class="char-length">Character Length</span>
-            <span class="range-indicator">{{rangeIndicator}}</span>
-        </div>
-        <input class="range-input" (change)="onRangeChange()" type="range" min="0" max="20" name="point" #range="ngModel" ngModel>
-      <div class="password-req-cont"   >
-          <div class="checkbox-requirement-container" *ngFor="let item of requirementArr">
-              <app-custom-checkbox (strengthEvent)="onStrengthEvent($event)" [active]="item"></app-custom-checkbox>
-              <span>{{item}}</span>
+<div>
+    <div class="app-title-container">    
+    <span>Password Generator</span>
+    </div>
+    <app-password-dashboard [password]="password"></app-password-dashboard>
+    <div class="app-container">
+        <form class="form-container" #f="ngForm">
+            <div class="char-length-dashboard-container">
+                <span class="char-length">Character Length</span>
+                <span class="range-indicator">{{rangeIndicator}}</span>
+            </div>
+            <input class="range-input" (change)="onRangeChange()" type="range" min="0" max="20" name="point" #range="ngModel" ngModel>
+          <div class="password-req-cont"   >
+              <div class="checkbox-requirement-container" *ngFor="let item of requirementArr">
+                  <app-custom-checkbox (strengthEvent)="onStrengthEvent($event)" [active]="item"></app-custom-checkbox>
+                  <span>{{item}}</span>
+              </div>
           </div>
-      </div>
-    </form>
-    <app-strength-dashboard [strengthNumber]="strengthNumber" ></app-strength-dashboard>
-    <button (click)="onGenerateClick()">Generate</button>
+        </form>
+        <app-strength-dashboard [strengthNumber]="strengthNumber" [status]="status" ></app-strength-dashboard>
+        <div class="generate-btn-container">
+            <button [disabled]="strengthNumber===0" (click)="onGenerateClick()">Generate</button>
+        </div>
+    </div>
 </div>

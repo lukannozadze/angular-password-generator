@@ -9,7 +9,7 @@ requirementArr:string[] = ['Include Uppercase Letters','Include Lowercase Letter
 mixedStringArr:string[]=['ABCDEFGHIJKLMNOPQRSTUVXYZ','abcdefghijklmnopqrstuvxyz','0123456789','£$&()*+[]@#^-_!?'];
 chosenReqArr:string[] = [];
 mixedString:string = '';
-
+tempPass:string = ''
  pass = '';
   constructor() { }
 
@@ -43,7 +43,7 @@ generatePassword(passLength:number){
     }
 
   }
-  console.log(this.pass);
+  this.tempPass = this.pass;
   this.pass = '';
   
 }

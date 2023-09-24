@@ -11,7 +11,7 @@ import { PasswordService } from 'src/app/password.service';
 })
 export class StrengthDashboardComponent {
 @Input('strengthNumber') strengthNumber:number = 0;
-
+@Input('status') status:string = '';
 constructor(private passService:PasswordService){
 }
 

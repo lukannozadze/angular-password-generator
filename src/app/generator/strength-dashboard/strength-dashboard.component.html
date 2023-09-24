@@ -1,8 +1,8 @@
 <div class="strength-container" >
-    <span>strength</span>
+    <span class="strength">strength</span>
     <div class="strength-level-dashboard">
-        <span>medium</span>
-        <div [ngClass]="{'too-weak':strengthNumber===1,'weak':strengthNumber===2,'medium':strengthNumber===3,'strong':strengthNumber===4}" class="strength-cubes-container">
+        <span class="pass-status" [textContent]="status"></span>
+        <div  [ngClass]="{'too-weak':strengthNumber===1,'weak':strengthNumber===2,'medium':strengthNumber===3,'strong':strengthNumber===4}" class="strength-cubes-container">
             <div class="cube cube1"></div>
             <div class="cube cube2"></div>
             <div class="cube cube3"></div>

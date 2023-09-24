@@ -12,15 +12,20 @@ ReqNumber:number = 0;
 rangeIndicator:number = 10;
 requirementArr:string[] = ['Include Uppercase Letters','Include Lowercase Letters','Include Numbers','Include Symbols'];
 strengthNumber:number = 0;
+status:string = '';
+password:string = '';
  onRangeChange(){
   this.rangeIndicator = +this.formEl.value
   console.log(this.formEl)
  }
  onGenerateClick(){
 this.passService.generatePassword(this.rangeIndicator);
+this.password = this.passService.tempPass;
+console.log(this.passService.chosenReqArr);
  }
 
- onStrengthEvent(eventData:number){
- this.strengthNumber = eventData;
+ onStrengthEvent(eventData:{status:string,strengthNumber:number}){
+ this.strengthNumber = eventData.strengthNumber;
+ this.status = eventData.status;
  }
 }

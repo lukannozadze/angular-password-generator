@@ -1,26 +1,38 @@
 .app-container{
     width: 540px;
     background-color:#24232C ;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding: 34px 32px 32px 32px;
+}
+.app-title-container{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 31px;
 }
 .char-length-dashboard-container{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding-bottom: 26px;
 }
 .range-input{
     width: 100%;
     height: 8px;
-    
+    margin-bottom: 42px;
     background-color: #18171F;
     -webkit-appearance: none;
     appearance: none;
 }
 .range-indicator{
     color: #A4FFAF;
+    font-size: 32px;
+    font-weight: bold;
+   
 }
 .char-length{
     color: #E6E5EA;
+    font-size: 18px;
+    font-weight: bold;
+    
 }
 .range-input::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -34,6 +46,21 @@
   .range-input::-webkit-slider-runnable-track{
     accent-color: #A4FFAF;
   }
+  .form-container{
+    padding-bottom: 32px;
+  }
+  .generate-btn-container{
+    display: flex;
+    justify-content: center;
+  }
+  .generate-btn-container button{
+    width: 100%;
+    background-color: #A4FFAF;
+    padding: 21px 0 21px 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
   .password-req-cont{
     display: flex;
     flex-direction: column;
@@ -45,4 +72,12 @@
   }
   .checkbox-requirement-container span{
   color: #E6E5EA;
+  font-size: 18px;
+  font-weight: bold;
+  }
+  .app-title-container span{
+  font-size: 24px;
+  font-weight: bold;
+  color: #817D92;
+  line-height: 32px;
   }
