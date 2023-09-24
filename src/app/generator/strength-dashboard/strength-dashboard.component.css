@@ -18,10 +18,16 @@
     width: 10px;
     height: 28px;
 }
-.strong{
-    background-color: green;
+.too-weak .cube1{
+    background-color: #F64A4A;
+}
+.weak .cube1, .weak .cube2{
+    background-color: #FB7C58;
 }
 
-.weak.cube1, .weak.cube2{
-    background-color: #FB7C58;
+.medium .cube1,.medium .cube2,.medium .cube3{
+    background-color: #F8CD65;
+}
+.strong .cube1, .strong .cube2,.strong .cube3,.strong .cube4{
+    background-color: #A4FFAF;
 }
