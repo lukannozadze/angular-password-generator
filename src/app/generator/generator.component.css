@@ -81,6 +81,43 @@
   color: #817D92;
   line-height: 32px;
   }
-  .right-arrow{
-    padding-left: 24px;
+  
+  .app-password-dashboard-container{
+    display: flex;
+    justify-content: center;
+  }
+
+
+  @media screen and (max-width:720px) {
+    .app-password-dashboard,.app-container{
+      width: 374px;
+    }
+    .app-title-container span{
+      font-size: 18px;
+    }
+    .checkbox-requirement-container span,.char-length{
+      font-size: 16px;
+    }
+    .range-indicator{
+      font-size: 28px;
+    }
+    .generate-btn-container button{
+      font-size: 16px;
+    }
+  }
+  
+  @media screen and (max-width:448px) {
+    .app-password-dashboard,.app-container{
+      width: 300px;
+    }
+    .app-title-container span{
+      font-size: 16px;
+    }
+    .app-container{
+      padding: 30px
+    }
+    .checkbox-requirement-container span,.generate-btn-container button{
+      font-size: 14px;
+    }
+    
   }

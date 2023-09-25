@@ -2,7 +2,9 @@
     <div class="app-title-container">    
     <span>Password Generator</span>
     </div>
-    <app-password-dashboard [password]="password" ></app-password-dashboard>
+    <div class="app-password-dashboard-container">
+        <app-password-dashboard class="app-password-dashboard" [password]="password" ></app-password-dashboard>
+    </div>
     <div class="app-container">
         <form class="form-container" #f="ngForm">
             <div class="char-length-dashboard-container">

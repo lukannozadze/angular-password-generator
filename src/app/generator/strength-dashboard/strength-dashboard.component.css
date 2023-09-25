@@ -50,3 +50,17 @@
 .strong .cube1, .strong .cube2,.strong .cube3,.strong .cube4{
     background-color: #A4FFAF;
 }
+@media screen and (max-width:720px) {
+    .pass-status{
+        font-size: 16px;
+    }
+    .strength{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:448px) {
+    .pass-status{
+        display: none;
+    }
+}
+
