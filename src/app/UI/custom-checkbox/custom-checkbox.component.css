@@ -5,8 +5,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-color: #A4FFAF;
+    border-color: #E6E5EA;
+    cursor: pointer;
 }
 .active{
+    border-color: #A4FFAF;
     background-color: #A4FFAF;
 }

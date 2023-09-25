@@ -8,7 +8,6 @@ import { CustomCheckboxComponent } from './UI/custom-checkbox/custom-checkbox.co
 import { StrengthDashboardComponent } from './generator/strength-dashboard/strength-dashboard.component';
 import { PasswordDashboardComponent } from './generator/password-dashboard/password-dashboard.component';
 import { CopyIconComponent } from './UI/copy-icon/copy-icon.component';
-import { RightArrowIconComponent } from './UI/right-arrow-icon/right-arrow-icon.component';
 import { CheckboxIconComponent } from './UI/checkbox-icon/checkbox-icon.component';
 import { ClipboardModule } from 'ngx-clipboard';
 @NgModule({
@@ -19,7 +18,6 @@ import { ClipboardModule } from 'ngx-clipboard';
     StrengthDashboardComponent,
     PasswordDashboardComponent,
     CopyIconComponent,
-    RightArrowIconComponent,
     CheckboxIconComponent
 
   ],
