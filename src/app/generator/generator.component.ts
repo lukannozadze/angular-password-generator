@@ -16,12 +16,10 @@ status:string = '';
 password:string = '';
  onRangeChange(){
   this.rangeIndicator = +this.formEl.value
-  console.log(this.formEl)
  }
  onGenerateClick(){
 this.passService.generatePassword(this.rangeIndicator);
 this.password = this.passService.tempPass;
-console.log(this.passService.chosenReqArr);
  }
 
  onStrengthEvent(eventData:{status:string,strengthNumber:number}){
